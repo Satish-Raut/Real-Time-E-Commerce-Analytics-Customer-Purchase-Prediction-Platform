@@ -101,7 +101,7 @@ def main():
                 time.sleep(1)
                 continue
 
-            # Batch process up to 30 events per cycle
+            #! Batch process up to 30 events per cycle
             batch_lines = new_lines[:30]
             records = [json.loads(line) for line in batch_lines if line.strip()]
             if records:
